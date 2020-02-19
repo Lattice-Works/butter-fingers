@@ -47,7 +47,7 @@ def butterfinger(text,prob=0.1,keyboard='querty'):
 		if not lcletter in keyApprox.keys():
 			newletter = lcletter
 		else:
-			if random.choice(range(0, 100)) <= probOfTypo:
+			if random.choice(range(0, 100)) < probOfTypo:
 				newletter = random.choice(keyApprox[lcletter])
 			else:
 				newletter = lcletter
